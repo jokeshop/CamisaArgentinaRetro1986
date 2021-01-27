@@ -113,23 +113,11 @@
   <div class="d-flex justify-content-center">
 
     <div class="areaCompra ml-2 mr-2 mt-2">
-      <div class="d-flex justify-content-center">
-
-        <h5  style="color: grey;" class="H3mengo mt-2">
-          Tamanho Altura Peso<br>
-        P 160-170cm 48-60kg<br>
-        M 170-175cm 58-70kg<br>
-        G 175-180cm 68-80kg<br>
-        GG 180-190cm 78-90kg<br>
-        2GG 190-200cm 88-100kg
-        
-        </h5>
-        
-        </div>
+   
         <div class="d-flex justify-content-center">
 
      
-          <select class="custom-select mr-3 ml-3 mb-3  col" id="select" required>
+          <select class="custom-select mr-3 ml-3 mb-3 mt-2  col" id="select" required>
             <option value="x" selected>Tamanho</option>
             <option value="P">P</option>
             <option value="M">M</option>
@@ -138,6 +126,20 @@
             <option value="2GG">2GG</option>
           </select>
           </div>
+          <div class="d-flex justify-content-center">
+
+     
+            <select class="custom-select mr-3 ml-3 mb-3 mt-2  col" id="select2" required>
+              <option value="x" selected>Customização</option>
+              <option value="m10">Maradona+10</option>
+              <option value="10">10</option>
+              <option value="N">Nenhuma</option>
+         
+            </select>
+            </div>
+            <div class="d-flex justify-content-center">
+              <h6 style="color: red;font-size: 12px;" class="H3mengo mt-1  ml-2 mr-1 ">Caso não queira personalizar escolha a opção "Nenhuma",dentro de "Customização".</h6>
+            </div>
           <div class="d-flex justify-content-center">
            
 
@@ -167,6 +169,11 @@
             <h4 style="color: grey;" class="H3mengo ml-2 mr-2 ">De <span style="color: red;"><s>R$250,00</s> </span> por <span style="color: red;">R$147,00</span>  </h4>
     
            </div>
+           <div class="d-flex justify-content-center">
+   
+            <h6 style="color: red;" class="h2green ">Valor da Customização:R$30,00
+            </h6>
+           </div>
           <div class="d-flex justify-content-center">
             <h5 style="color: red;" class="H3mengo "><b>FRETE GRÁTIS</b></h5>
           </div>
@@ -179,9 +186,7 @@
 
           <button type="submit" id="link" onclick="link()" class="efeito efeito-3 " >Comprar</button>
 </div>
-        <div class="d-flex justify-content-center mb-1">
-        <h6 style="color: red;" class="h2green ">Personalização opcional(31982301559)
-        </div>
+      
 
       
 
@@ -513,7 +518,8 @@ function link(){
   
   var link= document.getElementById("link")
   var select=document.getElementById("select").value
-  if(select==="x"){
+  var select2=document.getElementById("select2").value
+  if(select==="x" || select2==="x"  ){
     Swal.fire({
     
     icon: 'warning',
@@ -524,32 +530,72 @@ function link(){
 
   }
   else{
+    if(select==="P" && select2==="N"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/27NZ5O3ZMI"
+    }
+    else if(select==="M" && select2==="N"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/LL9W2NR69I"
 
-  switch(select){
-    case 'P':
-    window.location.href="https://jokeshop.pay.yampi.com.br/r/27NZ5O3ZMI"
-    break
-    case 'M':
-    window.location.href="https://jokeshop.pay.yampi.com.br/r/LL9W2NR69I"
-    break
-   case 'G':
-   window.location.href="https://jokeshop.pay.yampi.com.br/r/KG1MMXFGWB"
-   break
-   case 'GG':
-   window.location.href="https://jokeshop.pay.yampi.com.br/r/ANVTZKALZQ"
-   break
-   case '2GG':
-   window.location.href="https://jokeshop.pay.yampi.com.br/r/P23T4W2UCY"
-   
-   
+    }
+    else if(select==="G" && select2==="N"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/KG1MMXFGWB"
+    }
+    else if(select==="GG" && select2==="N"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/ANVTZKALZQ"
+    }
+    else if(select==="GG" && select2==="N"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/P23T4W2UCY"
 
-    
-  }
+    }
+    else if(select==="P" && select2==="m10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/5M1ZYZ4CWS"
+
+    }
+    else if(select==="M" && select2==="m10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/RO2JIGX8JW"
+
+    }
+    else if(select==="G" && select2==="m10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/EN6816QW0R"
+
+    }
+    else if(select==="GG" && select2==="m10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/D6N17FRPPQ"
+
+    }
+    else if(select==="GG" && select2==="m10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/AVV6M4KV20"
+
+    }
+    else if(select==="P" && select2==="10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/FSMLWQ3J6B"
+
+    }
+    else if(select==="M" && select2==="10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/9PQH2SZQJ6"
+
+    }
+    else if(select==="G" && select2==="10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/3M20I1FETA"
+
+    }
+    else if(select==="GG" && select2==="10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/RVLYLU0CU2"
+
+    }
+    else if(select==="2GG" && select2==="10"){
+      window.location.href="https://jokeshop.pay.yampi.com.br/r/JRT1ME1LAR"
+
+    }
+
+
   }
 }
+
 
 
   </script>
 </body>
 
 </html>
+© 2021 GitHub, Inc.
